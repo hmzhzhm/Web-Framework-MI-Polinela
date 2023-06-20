@@ -20,13 +20,13 @@ class Film extends BaseController
 
     public function index()
     {
-        $data['data_film'] = $this->film->getFilm();
+        $data['data_film'] = $this->film->getAllDataJoin();
         return view("film/index", $data);
         // dd($this->film->getFilm());
     }
 
     public function all(){
-        $data['semuafilm'] = $this->film->getAllData();
+        $data['semuafilm'] = $this->film->getAllDataJoin();
         return view("film/semuafilm", $data);
         // dd($this->film->getAllData());
     }
