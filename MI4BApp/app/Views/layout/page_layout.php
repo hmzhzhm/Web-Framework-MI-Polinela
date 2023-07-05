@@ -7,7 +7,8 @@
 	<title>LK99</title>
 
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <script src="/assets/js/unpkg.com_sweetalert@2.1.2_dist_sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -35,7 +36,17 @@
 		<div class="container text-center">Copyright &copy <?= Date('Y') ?> Hamzah Alfariansyah</div>
 	</footer>
 
-<script src="assets/js/bootstrap.min.js"></script>
-</body>
+<script src="/assets/js/bootstrap.min.js"></script>
+<?php if (session()->getFlashdata('success')) : ?>
+        <script>
+            swal({
+                title: "Informasi",
+                text: "<?= session()->getFlashdata('success') ?>",
+                icon: "success",
+                button: "OK",
+            });
+        </script>
 
+    <?php endif; ?>
+</body>
 </html>

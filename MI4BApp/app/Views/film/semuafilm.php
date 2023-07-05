@@ -12,7 +12,7 @@
 <body>
 <?= $this->extend('layout/page_layout'); echo $this->section('content') ?>
 <div class="container">
-    <div class="row">
+    <div class="row" >
         <?php foreach ($semuafilm as $film) : ?>
         <div class="col-md-3">
             <div class="card">
